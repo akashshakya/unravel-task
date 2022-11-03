@@ -1,0 +1,63 @@
+html {
+  scroll-snap-type: y mandatory;
+}
+
+.App {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  /* background-color: grey; */
+}
+
+.video-container {
+  position: relative;
+  height: 90vh;
+  width: auto !important;
+  max-width: 400px;
+  /* border-radius: 20px; */
+  background-color: white;
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+}
+
+.video-cards{
+    /* position: relative; */
+    height: 100vh;
+    width: auto !important;
+    /* max-width: 500px; */
+ 
+}
+
+.video-cards video{
+  object-fit: fill;
+}
+
+
+
+/* for chrome and opera */
+.video-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Media Queries for Mobile Devices */
+@media screen and (max-device-width: 480px)
+and (orientation: portrait) {
+  
+.video-container {
+  position: relative;
+  /* margin: 0; */
+  height: 100vh !important;
+  width: auto !important;
+  background-color: white;
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+  }
+
+  .video-cards{
+    height: 100vh !important;
+    width: auto !important;
+  }
+
+}
